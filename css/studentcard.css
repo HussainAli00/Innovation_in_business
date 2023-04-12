@@ -1,0 +1,99 @@
+
+
+        body {
+            background: url(../pics/background.jpg);
+            overflow-x: hidden;
+        }
+
+
+        .container {
+            background: white;
+            border: 1px solid black;
+            width: 420px;
+            height: 500px;
+            position: absolute;
+            left: 50%;
+            margin-top: 20%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            border-radius: 10px;
+        }
+      
+
+        .btn {
+            padding: 0.6rem 1.3rem;
+            background-color: #5ad29e;
+            border: 2px solid #aca5e1;
+            font-size: 0.95rem;
+            color: #bc72ba;
+            line-height: 1;
+            border-radius: 25px;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
+            margin: 0;
+        }
+
+        btn:hover {
+            background-color: transparent;
+            color: #fff;
+        }
+
+        .bg {
+            position: relative;
+            top: 20px;
+            left: -100px;
+        }
+
+        .circle1 {
+            width: 550px;
+            height: 550px;
+            background-color: maroon;
+            border-radius: 50%;
+            margin-left: 12px;
+        }
+
+        .circle2 {
+            width: 550px;
+            height: 550px;
+            background-color: rgb(173, 119, 119);
+            border-radius: 50%;
+            position: relative;
+            top: -357px;
+            left: 25px;
+
+        }
+
+        .info {
+            position: absolute;
+            top: 40px;
+            width: 100%;
+        }
+
+        .info img {
+            border-radius: 45px;
+            width: 140px;
+            height: 130px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .info h1 {
+            text-align: center;
+            font-family: 'Lucida Sans', Geneva, Verdana;
+            color: white;
+        }
+
+        .info h5 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 9.5px;
+            font-size: 17px;
+        }
+
+        .footer{
+            position: absolute;
+  bottom: 0;
+  width: 100%;
+        }

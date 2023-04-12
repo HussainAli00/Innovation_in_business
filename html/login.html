@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovations in Business & Technology- Login
+    </title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style=" background:url(../pics/background.jpg);">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./login.html">Student Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <a href="login.html"><button class="btn btn-outline-success" type="submit">Login</button></a>
+            </div>
+        </div>
+    </nav>
+    <!-- login form -->
+
+
+
+
+    <section class="side">
+        <img src="../pics/lock.gif" alt="">
+    </section>
+
+    <section class="main">
+        <div class="login">
+            <p class="title">Welcome Back!</p>
+            <div class="separator"></div>
+            <p class="welcome-message">Please enter your username and password to log in.</p>
+         
+                <div class="form-control">
+
+                   
+
+                    <br>
+                    <div class="box"> <input type="email" name="username" class="input" id="username" required
+                            placeholder="Username">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+
+                    <br>
+                    <div class="box"><input type="password" class="input" id="pass" required
+                            placeholder="password">
+                        <ion-icon name="lock-open-outline"></ion-icon>
+                    </div>
+
+
+                    <button class="btn1" id="submitBtn" type="submit">Login</button>
+                </div>
+           
+        </div>
+    </section>
+    <footer class="text-center footer">Copyright &copy; 2023 All rights reserved</footer>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    const myButton = document.getElementById("submitBtn");
+    const field1 = document.getElementById("username");
+    const field2 = document.getElementById("pass");
+
+    myButton.addEventListener("click", function(event) {
+        if (field1.value === "admin" && field2.value === "admin") {
+    window.location.href = "./Studentcard.html";
+  } else if (field1.value !== "admin") {
+    alert("Check your username");
+    field1.focus();
+  } else if (field2.value !== "admin") {
+    alert("Check your password");
+    field2.focus();
+  }
+    });
+  </script>
+</html>
