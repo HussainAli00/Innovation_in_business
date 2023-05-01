@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <!-- ===== ===== Custom Css ===== ===== -->
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- ===== ===== Remix Font Icons Cdn ===== ===== -->
+    <link rel="stylesheet" href="fonts/remixicon.css">
+    <style>
+        @media screen and (max-width: 1024px) {
+            html {
+                font-size: 9px;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            html {
+                font-size: 8px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            html {
+                font-size: 10px;
+            }
+
+            /* ===== =====>>  Container Css Start  <<===== ===== */
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "userProfile"
+                    "userDetails"
+                    "work_skills"
+                    "timeline_about";
+                overflow-x: hidden;
+                overflow-y: inherit;
+                padding: 0;
+                width: 90%;
+                height: 100%;
+                box-shadow: none;
+            }
+
+            /* ===== =====>>  Container Card Css Start  <<===== ===== */
+            .container .card {
+                backdrop-filter: none;
+            }
+
+            .userDetails {
+                margin-bottom: 3rem;
+            }
+
+            .container::before,
+            .container::after {
+                display: none;
+            }
+
+            /* ===== =====>>  Header/Navbar Css Start  <<===== ===== */
+            .container header {
+                padding: 2.5rem;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .container {
+                width: 100%;
+                overflow: initial;
+            }
+        }
+
+        @media screen and (max-width: 350px) {
+            .main_bg {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== ===== Body Main-Background ===== ===== -->
+    <span class="main_bg"></span>
+
+
+    <!-- ===== ===== Main-Container ===== ===== -->
+    <div class="container">
+
+        <!-- ===== ===== Header/Navbar ===== ===== -->
+        <header>
+            <div class="brandLogo">
+                <figure><img src="../pics/logo.jpg" alt="logo" width="40px" height="40px"></figure>
+                <span>Northumbria University</span>
+            </div>
+
+        </header>
+
+
+        <!-- ===== ===== User Main-Profile ===== ===== -->
+        <section class="userProfile card">
+            <div class="profile">
+                <figure><img src="../pics/pic6.jpg" alt="profile" width="250px" height="250px"></figure>
+            </div>
+        </section>
+
+
+        <!-- ===== ===== attendance and lectures ===== ===== -->
+        <section class="work_skills card">
+
+            <!-- ===== ===== attendance Contaienr ===== ===== -->
+            <div class="work">
+                <h1 class="heading">Attendance</h1>
+                <div class="primary">
+                    <h1>Cyber Security</h1>
+                    <span>91%</span>
+                </div>
+
+                <div class="primary">
+                    <h1>Information Technology</h1>
+                    <span>90%</span>
+                </div>
+
+                <div class="primary">
+                    <h1>Data Mining</h1>
+                    <span>82%</span>
+                </div>
+
+                <div class="primary">
+                    <h1>Networking</h1>
+                    <span>85%</span>
+                </div>
+
+                <div class="secondary">
+                    <h1>Database</h1>
+                    <span>80.5%</span>
+                </div>
+            </div>
+
+            <!-- ===== ===== Lecturar Contaienr ===== ===== -->
+            <div class="skills">
+                <h1 class="heading">Teacher's</h1>
+                <ul>
+                    <li style="--i:0">Laura</li>
+                    <li style="--i:1">Sciwan</li>
+                    <li style="--i:2">Kshand</li>
+                    <li style="--i:3">Kaira</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- ===== ===== User Details Sections ===== ===== -->
+        <section class="userDetails card">
+            <div class="userName">
+                <h1 class="name">Jeremy Rose</h1>
+                <div class="map">
+                    <i class="ri-map-pin-fill ri"></i>
+                    <span>New York, NY</span>
+                </div>
+                <p>Student</p>
+            </div>
+
+            <div class="rank">
+                <h1 class="heading">Grade</h1>
+                <span>8,9</span>
+                <div class="rating">
+                    <i class="ri-star-fill rate"></i>
+                    <i class="ri-star-fill rate"></i>
+                    <i class="ri-star-fill rate"></i>
+                    <i class="ri-star-fill rate"></i>
+                    <i class="ri-star-fill rate underrate"></i>
+                </div>
+            </div>
+
+            <div class="btns">
+                <ul>
+
+
+                    <li class="sendMsg active">
+                        <i class="ri-check-fill ri"></i>
+                        <a href="../html/dashboard.html">Check Dashboard</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- ===== ====About Sections ===== ===== -->
+        <section class="timeline_about card">
+            <div class="tabs">
+                <ul>
+
+                    <li class="about active">
+                        <i class="ri-user-3-fill ri"></i>
+                        <span>About</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact_Info">
+                <h1 class="heading">Contact Information</h1>
+                <ul>
+                    <li class="phone">
+                        <h1 class="label">Phone:</h1>
+                        <span class="info">+11 234 567 890</span>
+                    </li>
+
+                    <li class="address">
+                        <h1 class="label">Address:</h1>
+                        <span class="info">London,UK</span>
+                    </li>
+
+                    <li class="email">
+                        <h1 class="label">E-mail:</h1>
+                        <span class="info">xyz@gmail.com</span>
+                    </li>
+
+                    <li class="site">
+                        <h1 class="label">Site:</h1>
+                        <span class="info">www.xyz.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="basic_info">
+                <h1 style="color: black !important;; font-size: large; font-weight: bolder;">Basic Information</h1>
+                <ul>
+                    <li class="birthday">
+                        <h1 class="label">Birthday:</h1>
+                        <span class="info">Dec 25, 2000</span>
+                    </li>
+
+                    <li class="sex">
+                        <h1 class="label">Gender:</h1>
+                        <span class="info">Male</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

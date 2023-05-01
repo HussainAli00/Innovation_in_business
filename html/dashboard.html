@@ -1,211 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovations in Business & Technology - Student Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-        crossorigin="anonymous"></script>
-    <style>
-        .wrapper {
-            width: 100%;
-        }
+	<!-- Basic Page Info -->
+	<meta charset="utf-8">
+	<title>Innovation in Business - Dashboard</title>
 
-        .title h1 {
-            font-size: 46px;
-            font-weight: 700;
-            text-shadow: 4px;
-            text-align: center;
-            padding: 25px 0px;
-        }
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        .about {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: -14px;
-            padding: 0px 80px;
-            line-height: 5px;
-        }
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/core.css">
+	<link rel="stylesheet" type="text/css" href="../css/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../plugins/datatables/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="../plugins/datatables/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 
-        .image-section {
-            width: 90%;
-            height: auto;
-            width: auto;
-        }
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-        .image-section img {
-            height: 190px;
-            width: 219px;
-            border-radius: 50%;
-            border: 1px solid #000000;
-            display: block;
-            margin: auto;
-        }
-
-        .content {
-            min-height: 60vh;
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            margin: 40px 0;
-        }
-
-        .content .result {
-            min-height: 50vh;
-            flex: 5;
-            background: rgb(255, 255, 255);
-            margin: 0 25px 25px 25px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-        .head {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            padding: 10px 10px;
-            border-bottom: 2px solid #999;
-        }
-
-        article {
-            margin: 0px 40px;
-        }
-
-        @media screen and (max-width: 768px) {
-            .wrapper {
-                margin-top: 15px;
-            }
-
-            .title h1 {
-                font-size: 28px;
-                text-align: center;
-            }
-
-            .image-section img {
-                height: 130px;
-                width: 159px;
-            }
-
-            .about {
-                flex-direction: column;
-                margin-top: 10px;
-            }
-        }
-    </style>
+		gtag('config', 'UA-119386393-1');
+	</script>
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg" style=" background:url(../pics/background.jpg);">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./login.html">Student Card</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./contact.html">Contact Us</a>
-                    </li>
-                </ul>
-                <a href="login.html"><button class="btn btn-outline-success" id="login-btn"
-                        type="submit">Log out</button></a>
-            </div>
-        </div>
-    </nav>
+	<div class="pre-loader">
+		<div class="pre-loader-box">
+			<div class="loader-logo"><img src="../pics/loadr.png" alt=""></div>
+			<div class='loader-progress' id="progress_div">
+				<div class='bar' id='bar1'></div>
+			</div>
+			<div class='percent' id='percent1'>0%</div>
+			<div class="loading-text">
+				Loading...
+			</div>
+		</div>
+	</div>
 
-    <!-- student info -->
-    <div class="wrapper">
-        <div class="title">
-            <h1>
-                Student Dashboard
-            </h1>
-        </div>
-        <div class="about">
-            <div class="image-section">
-                <img src="../pics/pic6.jpg" alt="" srcset="">
-            </div>
-            <article>
-                <h5><b>Student ID:</b> <span>1234567</span></h5>
-                <h5><b> Student Name:</b> <span>William Jason</span> </h5>
-                <h5> <b> Department: </b><span>BS Computer Sciences</span> </h5>
-            </article>
-        </div>
-    </div>
+	<div class="header" style="background-color: black;">
+		<div class="header-left">
+			<div class="menu-icon dw"><img style="border-radius: 10px; margin-left: 17px;" src="../pics/icons/menu.jpg"
+					alt="" srcset="">
+			</div>
+			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
+		</div>
 
-    <!-- dashboard -->
-    <div class="content">
-        <div class="result">
-            <div class="head">
-                <h3>Student Result Information</h3>
-            </div>
-            <table class="table">
-                <thead>
-                    <tr class="table-dark">
-                        <th scope="col">Subject</th>
-                        <th scope="col">Assignment</th>
-                        <th scope="col">Quiz</th>
-                        <th scope="col">Presentation</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Module 1</th>
-                        <td>40</td>
-                        <td>38</td>
-                        <td>15</td>
-                        <td>93</td>
-                    </tr>
-                    <tr class="table-secondary">
-                        <th scope="row">Module 2</th>
-                        <td>36</td>
-                        <td>30</td>
-                        <td>12</td>
-                        <td>78</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Module 3</th>
-                        <td>35</td>
-                        <td>37</td>
-                        <td>19</td>
-                        <td>91</td>
-                    </tr>
-                    <tr class="table-secondary">
-                        <th scope="row">Module 4</th>
-                        <td>38</td>
-                        <td>35</td>
-                        <td>17</td>
-                        <td>90</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Module 5</th>
-                        <td>32</td>
-                        <td>28</td>
-                        <td>12</td>
-                        <td>72</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div>
-        <footer class="text-center footer">Copyright &copy; 2023 All rights reserved</footer>
-    </div>
+		<!-- header right menu -->
+		<div class="header-right">
+			<div class=" dashboard-setting user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+
+					</a>
+				</div>
+			</div>
+			<div class="user-info-dropdown">
+				<div class="dropdown">
+					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+						<span class="user-icon">
+							<img style="height: 52px;width: 52px;" src="../pics/pic6.jpg" alt="">
+						</span>
+						<span class="user-name" style="color: aliceblue;">William Jason</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+						<a class="dropdown-item" href="profile.html"><i> <img src="../pics/icons/user.jpg"
+									style="height: 40px; width: 35px; margin-left: -5px;" alt=""></i>
+							Profile</a>
+						<a class="dropdown-item" href="../html/login.html"><i><img src="../pics/icons/logout.webp"
+									style="height: 28px; width: 30px; margin-left: -5px;" alt=""></i> Log Out</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Left Menu Bar -->
+	<div class="left-side-bar" style="background-color: black;">
+		<div class="brand-logo">
+			<a href="../index.html">
+				<img style="height: 49px;
+				width: 130px;
+				" src="../pics/logo.jpg" alt="" class="light-logo">
+			</a>
+			<div class="close-sidebar" data-toggle="left-sidebar-close">
+				<i class="ion-close-round"></i>
+			</div>
+		</div>
+		<div class="menu-block customscroll">
+			<div class="sidebar-menu">
+				<ul id="accordion-menu">
+					<li class="dropdown">
+						<a href="../index.html" class="dropdown-toggle no-arrow">
+							<span><img style="height: 23px;
+								width: 32px;
+								margin-left: -49px;" src="../pics/icons/home.jpg" alt=""> </span><span class="mtext">Home</span>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a href="./dashboard.html" class="dropdown-toggle no-arrow">
+							<span><img style="height: 40px;
+								width: 35px;
+								margin-left: -48px; margin-top: -11px;" src="../pics/icons/dashbord.jpg" alt="" srcset=""></span><span
+								class="mtext">Dashboard</span>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a href="./profile.html" class="dropdown-toggle no-arrow">
+							<span><img style="height: 30px;
+								width: 32px;
+					margin-left: -49px; margin-top: -3px;" src="../pics/icons/profile.jpg" alt=""></span><span
+								class="mtext">Profile</span>
+						</a>
+					</li>
+					<li>
+						<a href="../html/contact.html" class="dropdown-toggle no-arrow">
+							<span><img style="height: 35px;
+								width: 32px;
+								margin-left: -49px; margin-top: -5px;" src="../pics/icons/contact.png" alt=""></span><span
+								class="mtext">Contact Us</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu-overlay"></div>
+
+	<!-- Container -->
+	<div class="main-container">
+		<div class="pd-ltr-20">
+
+			<!-- Student info -->
+			<div class="card-box pd-20 height-100-p mb-30">
+				<div class="row align-items-center">
+					<div class="col-md-4">
+						<img style="height: 183px; width: 172px; margin-left: 67px;" src="../pics/pic6.jpg" alt="">
+					</div>
+					<div class="col-md-8">
+						<h4 class="font-20 weight-500 mb-10 text-capitalize">
+							Welcome back <div class="weight-600 font-30 text-blue">William Jason!</div>
+						</h4>
+						<p class="max-width-600">
+						<h5 class="font-18"><b>Student ID:</b> <span class="font-14">1234567</span></h5>
+						<h5 class="font-18"><b> Student Name:</b> <span class="font-14">William Jason</span> </h5>
+						<h5 class="font-18"> <b> Department: </b><span class="font-14">BSIT</span> </h5>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Progress row -->
+			<div class="row">
+				<div class="col-xl-3 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+							<div class="progress-data">
+								<div id="chart"></div>
+							</div>
+							<div class="widget-data">
+								<div class="h4 mb-0">Current Smester</div>
+								<div class="weight-600 font-14">Progress</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+							<div class="progress-data">
+								<div id="chart3"></div>
+							</div>
+							<div class="widget-data">
+								<div class="h4 mb-0">Project</div>
+								<div class="weight-600 font-14">Progress</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+							<div class="progress-data">
+								<div id="chart2"></div>
+							</div>
+							<div class="widget-data">
+								<div class="h4 mb-0">Previous Smesters</div>
+								<div class="weight-600 font-14">CGPA</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-3 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+							<div class="progress-data">
+								<div id="chart4"></div>
+							</div>
+							<div class="widget-data">
+								<div class="h4 mb-0">$6060</div>
+								<div class="weight-600 font-14">Current Balance</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Student Result Information -->
+			<div class="row">
+				<div class="col-xl-8 mb-30">
+					<div class="card-box height-100-p pd-20">
+						<h2 class="h4 mb-20">Result Information</h2>
+						<div>
+							<table class="table">
+								<thead>
+									<tr class="table-dark">
+										<th scope="col">Subject</th>
+										<th scope="col">Assignment</th>
+										<th scope="col">Quiz</th>
+										<th scope="col">Presentation</th>
+										<th scope="col">Total</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">Module 1</th>
+										<td>40</td>
+										<td>30</td>
+										<td>30</td>
+										<td>100</td>
+									</tr>
+									<tr class="table-secondary">
+										<th scope="row">Module 2</th>
+										<td>36</td>
+										<td>30</td>
+										<td>22</td>
+										<td>88</td>
+									</tr>
+									<tr>
+										<th scope="row">Module 3</th>
+										<td>40</td>
+										<td>25</td>
+										<td>20</td>
+										<td>85</td>
+									</tr>
+									<tr class="table-secondary">
+										<th scope="row">Module 4</th>
+										<td>31</td>
+										<td>27</td>
+										<td>20</td>
+										<td>78</td>
+									</tr>
+									<tr>
+										<th scope="row">Module 5</th>
+										<td>33</td>
+										<td>29</td>
+										<td>30</td>
+										<td>92</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 mb-30">
+					<div class="card-box height-100-p pd-20" style="background-color: rgb(147, 147, 147);">
+						<h2 class="h4 mb-20">Goals</h2>
+						<div id="chart6"></div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- Footer -->
+		<div class="footer-wrap pd-10 mb-20 card-box" style="background-color: rgb(10, 10, 11); color: aliceblue;">
+			Copyright &copy; 2023 All rights reserved
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="../js/core.js"></script>
+	<script src="../js/script.min.js"></script>
+	<script src="../js/process.js"></script>
+	<script src="../js/layout-settings.js"></script>
+	<script src="../plugins/apexcharts/apexcharts.min.js"></script>
+	<script src="../plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="../plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+	<script src="../plugins/datatables/js/dataTables.responsive.min.js"></script>
+	<script src="../plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+	<script src="../js/dashboard.js"></script>
 </body>
 
 </html>

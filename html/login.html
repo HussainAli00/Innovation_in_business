@@ -1,102 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovations in Business & Technology- Login
-    </title>
-    <link rel="stylesheet" href="../css/login.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-        crossorigin="anonymous"></script>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8">
+	<title>Innovation in Business - Login</title>
 
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/core.css">
+	<link rel="stylesheet" type="text/css" href="../css/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-119386393-1');
+	</script>
 </head>
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg" style=" background:url(../pics/background.jpg);">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./login.html">Student Card</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-                <a href="login.html"><button class="btn btn-outline-success" type="submit">Login</button></a>
-            </div>
-        </div>
-    </nav>
-    <!-- login form -->
+<body class="login-page">
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg" style="background-color: black;">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<img style="height: 40px;" src="../pics/logo.jpg" alt="" srcset="">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link text-light" href="../index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="login.html">Dashboard</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="./contact.html">Contact Us</a>
+					</li>
+				</ul>
 
+			</div>
+			<div class="login-menu">
+				<ul>
+					<li><a href="../html/register.html" style="color:aliceblue;">Register</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
+	<div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-md-6 col-lg-7">
+					<img src="../pics/login.avif" alt="">
+				</div>
+				<div class="col-md-6 col-lg-5">
+					<div class="login-box bg-white box-shadow border-radius-10">
+						<div class="login-title">
+							<h2 class="text-center text-primary">Login To Dashboard</h2>
+						</div>
 
+						<div class="select-role">
+							<div class="btn-group btn-group-toggle" data-toggle="buttons">
+							</div>
+						</div>
+						<div class="input-group custom">
+							<input id="username" type="text" class="form-control" required placeholder="Username">
+							<div class="input-group-append custom">
+								<span class="input-group-text"><i><ion-icon name="person-outline"></ion-icon></i></span>
+							</div>
+						</div>
+						<div class="input-group custom">
+							<input type="password" id="pass" class="form-control" required placeholder="**********">
+							<div class="input-group-append custom">
+								<span class="input-group-text"><i><ion-icon name="key-outline"></ion-icon></i></span>
+							</div>
+						</div>
+						<div class="row pb-30">
+							<div class="col-6">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="customCheck1">
+									<label class="custom-control-label" for="customCheck1">Remember</label>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="forgot-password"><a href="forgot-password.html">Forgot Password</a>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="input-group mb-0">
+									<a id="submitBtn" class="btn btn-primary btn-lg btn-block">Sign In</a>
+								</div>
+								<div class="font-16 weight-600 pt-10 pb-10 text-center" data-color="#707373">OR
+								</div>
+								<div class="input-group mb-0">
+									<a class="btn btn-outline-primary btn-lg btn-block" href="register.html">Register To
+										Create Account</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <section class="side">
-        <img src="../pics/lock.gif" alt="">
-    </section>
+		<script>
+			const myButton = document.getElementById("submitBtn");
+			const field1 = document.getElementById("username");
+			const field2 = document.getElementById("pass");
 
-    <section class="main">
-        <div class="login">
-            <p class="title">Welcome Back!</p>
-            <div class="separator"></div>
-            <p class="welcome-message">Please enter your username and password to log in.</p>
-         
-                <div class="form-control">
+			myButton.addEventListener("click", function (event) {
+				if (field1.value === "admin" && field2.value === "admin") {
+					window.location.href = "./dashboard.html";
+				} else if (field1.value !== "admin") {
+					alert("Check your username");
+					field1.focus();
+				} else if (field2.value !== "admin") {
+					alert("Check your password");
+					field2.focus();
+				}
+			});
+		</script>
 
-                   
+		<!-- js -->
+		<script src="../js/core.js"></script>
+		<script src="../js/script.min.js"></script>
+		<script src="../js/process.js"></script>
+		<script src="../js/layout-settings.js"></script>
 
-                    <br>
-                    <div class="box"> <input type="email" name="username" class="input" id="username" required
-                            placeholder="Username">
-                        <ion-icon name="mail-outline"></ion-icon>
-                    </div>
-
-                    <br>
-                    <div class="box"><input type="password" class="input" id="pass" required
-                            placeholder="password">
-                        <ion-icon name="lock-open-outline"></ion-icon>
-                    </div>
-
-
-                    <button class="btn1" id="submitBtn" type="submit">Login</button>
-                </div>
-           
-        </div>
-    </section>
-    <footer class="text-center footer">Copyright &copy; 2023 All rights reserved</footer>
+		<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script>
-    const myButton = document.getElementById("submitBtn");
-    const field1 = document.getElementById("username");
-    const field2 = document.getElementById("pass");
 
-    myButton.addEventListener("click", function(event) {
-        if (field1.value === "admin" && field2.value === "admin") {
-    window.location.href = "./Studentcard.html";
-  } else if (field1.value !== "admin") {
-    alert("Check your username");
-    field1.focus();
-  } else if (field2.value !== "admin") {
-    alert("Check your password");
-    field2.focus();
-  }
-    });
-  </script>
 </html>
