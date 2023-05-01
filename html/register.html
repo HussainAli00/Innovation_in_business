@@ -87,7 +87,7 @@
 										<div class="form-group row">
 											<label class="col-sm-4 col-form-label">Email Address*</label>
 											<div class="col-sm-8">
-												<input type="email" required class="form-control">
+												<input type="email" class="form-control" required >
 											</div>
 										</div>
 										<div class="form-group row">
@@ -218,6 +218,9 @@
 										</div>
 									</div>
 								</section>
+								<!-- success Popup html Start -->
+	<button type="button" id="success-modal-btn" hidden data-toggle="modal" data-target="#success-modal"
+	data-backdrop="static">Launch modal</button>
 							</form>
 						</div>
 					</div>
@@ -226,9 +229,7 @@
 		</div>
 	</div>
 
-	<!-- success Popup html Start -->
-	<button type="button" id="success-modal-btn" hidden data-toggle="modal" data-target="#success-modal"
-		data-backdrop="static">Launch modal</button>
+	
 	<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
 		aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered max-width-400" role="document">
@@ -255,6 +256,7 @@
 	<script src="../js/layout-settings.js"></script>
 	<script src="../plugins/jquery-steps/jquery.steps.js"></script>
 	<script src="../js/steps-setting.js"></script>
+	<script src="../js/formvalidation.js"></script>
 </body>
 
 </html>
